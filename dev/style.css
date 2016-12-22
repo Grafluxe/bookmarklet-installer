@@ -1,5 +1,6 @@
 /**
  * @author Leandro Silva | Grafluxe, 2016
+ * @license MIT
  */
 
 body {
@@ -10,7 +11,7 @@ body {
 }
 
 a {
-  background-color: #666;
+  background-color: #777;
   padding: 15px;
   box-shadow: -5px 5px 8px #ccc;
   margin: 10px 0;
@@ -20,7 +21,7 @@ a {
   border-radius: 3px;
 }
 
-#desktop {
+.draggable{
  cursor: move;
 }
 
@@ -39,4 +40,14 @@ li {
 ul li {
   padding: 3px 0;
   color: #888;
+}
+
+.disable {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+#msg {
+  margin-left: 10px;
+  color: #666;
 }
