@@ -10,7 +10,7 @@ body {
   color: #333;
 }
 
-a {
+div > a {
   background-color: #777;
   padding: 15px;
   box-shadow: -5px 5px 8px #ccc;
