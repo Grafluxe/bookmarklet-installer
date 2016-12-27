@@ -3,51 +3,126 @@
  * @license MIT
  */
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
 body {
-  margin: 30px;
-  font: 14px sans-serif;
-  background-color: #f6f6f6;
+  font: 15px "Open Sans", arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+}
+
+header {
+  padding: 15px 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#header-title {
+  margin-left: 30px;
+  width: 75%;
+  width: calc(100% - 130px);
+  word-break: break-word;
+}
+
+#header-title > span {
+  margin-left: 3px;
+}
+
+h1 {
   color: #333;
 }
 
-div > a {
-  background-color: #777;
+#main {
+  padding: 15px 30px;
+}
+
+#main div, #header-title {
+  max-width: 660px;
+  margin: auto;
+}
+
+input {
+  padding: 15px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  width: 93%;
+  width: calc(100% - 30px);
+  font: inherit;
+  border-radius: 3px;
+  box-shadow: 0 4px 7px -4px #bbb inset;
+}
+
+input.short {
+  width: 200px;
+}
+
+#main #created {
+  margin: 30px 0;
+}
+
+.btn {
+  background-color: #51bbc1;
   padding: 15px;
   box-shadow: -5px 5px 8px #ccc;
   margin: 10px 0;
   display: inline-block;
   text-decoration: none;
-  color: #eee;
+  color: #fff;
   border-radius: 3px;
+}
+
+.btn:hover {
+  background-color: #63ccd2;
 }
 
 .draggable{
  cursor: move;
 }
 
+.draggable:hover {
+  background-color: #51bbc1;
+  transform: translate(1px, -1px);
+  box-shadow: -7px 7px 8px #ccc;
+}
+
 hr {
-  margin: 40px 0;
+  margin: 40px auto;
+  max-width: 700px;
 }
 
 ol, ul {
   padding: 0 15px;
 }
 
+ul > li {
+  color: #999;
+}
+
 li {
   padding: 3px 0;
 }
 
-ul li {
-  padding: 3px 0;
-  color: #888;
+.hide {
+  display: none;
 }
 
-.disable {
-  opacity: 0.3;
+.dim {
+  opacity: 0.25;
   pointer-events: none;
 }
 
 #msg {
   margin-left: 10px;
   color: #666;
+}
+
+#fork-me {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
 }

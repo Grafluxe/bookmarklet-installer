@@ -1,0 +1,16 @@
+{
+	"name": "Bookmarklet Installer",
+	"icons": [
+		{
+			"src": "img\/icon\/android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image\/png"
+		},
+		{
+			"src": "img\/icon\/android-chrome-256x256.png",
+			"sizes": "256x256",
+			"type": "image\/png"
+		}
+	],
+	"theme_color": "#3c3c3c"
+}

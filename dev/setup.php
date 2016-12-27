@@ -4,16 +4,15 @@
  * @license MIT
  */
 
-$bmk = $_GET["!"];
+session_start();
 
-if ($bmk) {
-  $title = $_COOKIE["bmk_title"];
-  $err = !isset($title);
-} else {
+$install_pg = isset($_GET["path"]);
+$mobile_step2 = isset($_GET["!"]);
+$host_uri = "http" . (isset($_SERVER["HTTPS"]) ? "s" : "") . rtrim("://$_SERVER[HTTP_HOST]", "/") . dirname($_SERVER["PHP_SELF"]);
+
+if ($install_pg) {
   $title = "[" . ($_GET[title] ?: "bookmarklet") . "]";
   $script_path = $_GET["path"];
-
-  $err = (substr($script_path, -3) !== "js");
 
   $ch = curl_init();
 
@@ -27,11 +26,16 @@ if ($bmk) {
 
   curl_close($ch);
 
-  if (!$err) {
-    $exp = time() + ((60 * 8) * 60);
-
-    setcookie("bmk_title", $title, $exp);
+  if (!$err && !isset($_SESSION["bmk_title"])) {
+    $_SESSION["bmk_title"] = $title;
+    $_SESSION["bmk_data"] = $data;
   }
+} else if ($mobile_step2) {
+  $title = $_SESSION["bmk_title"];
+  $data = $_SESSION["bmk_data"];
+  $err = !isset($data);
+
+  unset($_SESSION["bmk_title"], $_SESSION["bmk_data"]);
 }
 
 ?>

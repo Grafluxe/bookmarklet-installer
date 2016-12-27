@@ -9,21 +9,32 @@ I wanted to create something that is:
 - Easy for a bookmarklet author to use in order to share his/her bookmarklet.
 - Clear for visitors to use in order to install the bookmarklet.
 
-Note that I purposefully kept the styling and color palette minimal, so to not impose my design opinion.
+## Share Your Own Bookmarklet
 
-## How To Use
+Visit <http://grafluxe.com/asset/bmk>.
 
-To create a URL to share your bookmarklet, define the bookmarklets *title* (optional) and a *path* to where your minified bookmarket code is hosted. The *path* should be [URL encoded](http://www.url-encode-decode.com/).
+**Alternatively, you can follow the below steps:**
+
+To create a share URL for your bookmarklet, define the bookmarklets *title* (optional) and a *path* to where your minified code is hosted. The *path* parameter should be [URL encoded](http://www.url-encode-decode.com/).
 
 ```
 http://grafluxe.com/asset/bmk?title=similar-imgs&path=bit.ly%2F2hx1n73
 ```
 
-To above example is hosted on my site. Feel free to use my site, or serve from your own. Also, the bookmarklet I'm sharing can be found [here](https://github.com/Grafluxe/similar-imgs).
+The above example is hosted on my site; feel free to use it, or clone and serve from your own PHP server. Also, the bookmarklet I'm sharing can be found [here](https://github.com/Grafluxe/similar-imgs).
 
 ## Sample
 
 Install the [Similar Image Searcher](http://grafluxe.com/asset/bmk?title=similar-imgs&path=bit.ly%2F2hx1n73) bookmarklet. Further instructions are on the install page.
+
+## Notes
+
+- In the bookmarklet creation process, this service prepends `javascript:` and appends `void(0);` to your code.
+- As a convention, all bookmarklet names start and end with brackets (e.g. "[My Bookmarklet]");
+
+## Thanks
+
+- Favicon generation provided by [realfavicongenerator](http://realfavicongenerator.net).
 
 ## License
 
