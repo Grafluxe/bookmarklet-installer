@@ -29,7 +29,7 @@ Install the [Similar Image Searcher](http://grafluxe.com/asset/bmk?title=similar
 
 ## Notes
 
-- In the bookmarklet creation process, this service prepends `javascript:` and appends `void(0);` to your code.
+- In the bookmarklet creation process, this service wraps your code in an [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) and prepends `javascript:void`.
 - As a convention, all bookmarklet names start and end with brackets (e.g. "[My Bookmarklet]");
 
 ## Thanks

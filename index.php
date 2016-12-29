@@ -5,23 +5,25 @@
  */
 
 include "./dev/setup.php";
+$meta_title = ($mobile_step2 && !$err ? $title : "Bookmarklet Installer");
 ?>
 <!doctype html>
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Bookmarklet Installer</title>
+  <title><?php echo $meta_title; ?></title>
   <meta name="viewport" content="width=device-width">
 
-  <meta name="apple-mobile-web-app-title" content="Bookmarklet Installer">
-  <meta name="application-name" content="Bookmarklet Installer">
-  <meta name="msapplication-config" content="img/icon/browserconfig.xml">
+  <meta name="apple-mobile-web-app-title" content="<?php echo $meta_title; ?>">
+  <meta name="application-name" content="<?php echo $meta_title; ?>">
+  <meta name="msapplication-config" content="./img/icon/browserconfig.xml">
   <meta name="theme-color" content="#3c3c3c">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="img/icon/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="img/icon/favicon-16x16.png" sizes="16x16">
-  <link rel="manifest" href="img/icon/manifest.json">
-  <link rel="mask-icon" href="img/icon/safari-pinned-tab.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="./img/icon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="./img/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="./img/icon/manifest.json">
+  <link rel="mask-icon" href="./img/icon/safari-pinned-tab.svg">
+  <link rel="shortcut icon" href="./favicon.ico?v=1">
 
   <link rel="stylesheet" href="./dev/style.css">
 </head>

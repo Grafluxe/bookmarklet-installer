@@ -11,7 +11,7 @@ $mobile_step2 = isset($_GET["!"]);
 $host_uri = "http" . (isset($_SERVER["HTTPS"]) ? "s" : "") . rtrim("://$_SERVER[HTTP_HOST]", "/") . dirname($_SERVER["PHP_SELF"]);
 
 if ($install_pg) {
-  $title = "[" . ($_GET[title] ?: "bookmarklet") . "]";
+  $title = "[" . ($_GET["title"] ?: "bookmarklet") . "]";
   $script_path = $_GET["path"];
 
   $ch = curl_init();
@@ -20,7 +20,7 @@ if ($install_pg) {
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($ch, CURLOPT_URL, $script_path);
 
-  $data = "javascript:" . rawurlencode(curl_exec($ch)) . "void(0);";
+  $data = "javascript:void (function(){" . str_replace("\"", "%22", curl_exec($ch)) . "}());";
   $info = curl_getinfo($ch);
   $err = ($info["http_code"] !== 200);
 
