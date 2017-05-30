@@ -11,21 +11,21 @@ I wanted to create something that is:
 
 ## Share Your Own Bookmarklet
 
-Visit <http://grafluxe.com/asset/bmk>.
+Visit <http://grafluxe.com/o/bmk>.
 
 **Alternatively, you can follow the below steps:**
 
 To create a share URL for your bookmarklet, define the bookmarklets *title* (optional) and a *path* to where your minified code is hosted. The *path* parameter should be [URL encoded](http://www.url-encode-decode.com/).
 
 ```
-http://grafluxe.com/asset/bmk?title=similar-imgs&path=bit.ly%2F2hx1n73
+http://grafluxe.com/o/bmk?title=similar-imgs&path=bit.ly%2F2hx1n73
 ```
 
 The above example is hosted on my site; feel free to use it, or clone and serve from your own PHP server. Also, the bookmarklet I'm sharing can be found [here](https://github.com/Grafluxe/similar-imgs).
 
 ## Sample
 
-Install the [Similar Image Searcher](http://grafluxe.com/asset/bmk?title=similar-imgs&path=bit.ly%2F2hx1n73) bookmarklet. Further instructions are on the install page.
+Install the [Similar Image Searcher](http://grafluxe.com/o/bmk?title=similar-imgs&path=bit.ly%2F2qnAWsP) bookmarklet. Further instructions are on the install page.
 
 ## Notes
 
